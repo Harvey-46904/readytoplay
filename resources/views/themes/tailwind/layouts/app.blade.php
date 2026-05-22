@@ -44,8 +44,80 @@
 
     <!-- Styles -->
     <link href="{{ asset('themes/' . $theme->folder . '/css/app.css') }}" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    body {
+      background-color: #0f0f0f;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      background-color: #000;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.8)),
+      url('https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1600&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: bold;
+    }
+
+    .green {
+      color: #00ff88;
+    }
+
+    .btn-green {
+      background: #00ff88;
+      color: black;
+      font-weight: bold;
+      border: none;
+    }
+
+    .btn-green:hover {
+      background: #00cc6e;
+      color: white;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .card-custom {
+      background: #1b1b1b;
+      border: 1px solid #00ff88;
+      transition: 0.3s;
+      height: 100%;
+    }
+
+    .card-custom:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(0,255,136,.4);
+    }
+
+    footer {
+      background: #000;
+      padding: 20px;
+      text-align: center;
+      margin-top: 50px;
+    }
+  </style>
 </head>
-<body class="flex flex-col min-h-screen @if(Request::is('/')){{ 'bg-white' }}@else{{ 'bg-gray-50' }}@endif @if(config('wave.dev_bar')){{ 'pb-10' }}@endif">
+<body class="flex flex-col min-h-screen @if(Request::is('/')){{ 'bg-dark' }}@else{{ 'bg-gray-50' }}@endif @if(config('wave.dev_bar')){{ 'pb-10' }}@endif">
 
     @if(config('wave.demo') && Request::is('/'))
         @include('theme::partials.demo-header')
