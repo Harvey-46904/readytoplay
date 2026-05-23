@@ -1,0 +1,48 @@
+<?php
+
+namespace App\Observers;
+
+use App\Models\Equipo;
+
+class EquipoObserver
+{
+    /**
+     * Handle the Equipo "created" event.
+     */
+    public function created(Equipo $equipo): void
+    {
+        //
+    }
+
+    /**
+     * Handle the Equipo "updated" event.
+     */
+    public function updated(Equipo $equipo): void
+    {
+        //
+    }
+
+    /**
+     * Handle the Equipo "deleted" event.
+     */
+    public function deleted(Equipo $equipo): void
+    {
+        //
+    }
+
+    /**
+     * Handle the Equipo "restored" event.
+     */
+    public function restored(Equipo $equipo): void
+    {
+        //
+    }
+
+    /**
+     * Handle the Equipo "force deleted" event.
+     */
+    public function forceDeleted(Equipo $equipo): void
+    {
+        //
+    }
+}

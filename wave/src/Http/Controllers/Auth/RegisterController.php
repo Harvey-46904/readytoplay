@@ -120,6 +120,8 @@ class RegisterController extends Controller
             'username' => $username,
             'password' => bcrypt($data['password']),
             'role_id' => $role->id,
+            'documento'=>$data['documento'],
+            'celular'=>$data['celular'],
             'verification_code' => $verification_code,
             'verified' => $verified,
             'trial_ends_at' => $trial_ends_at

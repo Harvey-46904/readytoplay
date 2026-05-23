@@ -5,7 +5,11 @@ namespace App\Providers;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
+use App\Models\Equipo;
+use App\Observers\EquipoObserver;
 
+use App\Models\Torneo;
+use App\Observers\TorneoObserver;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -25,6 +29,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+         Equipo::observe(EquipoObserver::class);
+          Torneo::observe(TorneoObserver::class);
+
         if ($this->app->environment() == 'production') {
             $this->app['request']->server->set('HTTPS', true);
         }

@@ -40,8 +40,8 @@
 
     @if(isset($seo->description))
         <meta name="description" content="{{ $seo->description }}">
-    @endif
-
+    @endif 
+<link rel="stylesheet" href="{{ asset('ready/'  . '/css/mystyle.css') }}">
     <!-- Styles -->
     <link href="{{ asset('themes/' . $theme->folder . '/css/app.css') }}" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -117,7 +117,7 @@
     }
   </style>
 </head>
-<body class="flex flex-col min-h-screen @if(Request::is('/')){{ 'bg-dark' }}@else{{ 'bg-gray-50' }}@endif @if(config('wave.dev_bar')){{ 'pb-10' }}@endif">
+<body class="flex flex-col min-h-screen @if(Request::is('/')){{ 'bg-dark' }}@else{{ 'bg-dark' }}@endif @if(config('wave.dev_bar')){{ 'pb-10' }}@endif">
 
     @if(config('wave.demo') && Request::is('/'))
         @include('theme::partials.demo-header')
@@ -125,7 +125,7 @@
 
     @include('theme::partials.header')
 
-    <main class="flex-grow overflow-x-hidden">
+    <main class="flex-grow overflow-x-hidden fondo-contenedor">
         @yield('content')
     </main>
 

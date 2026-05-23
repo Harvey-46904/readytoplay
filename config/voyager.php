@@ -12,7 +12,7 @@ return [
 
     'user' => [
         'add_default_role_on_register' => true,
-        'default_role'                 => 'trial',
+        'default_role'                 => 'Espectador',
         'namespace'                    => \App\Models\User::class,
         'default_avatar'               => 'users/default.png',
     ],
@@ -42,7 +42,7 @@ return [
     */
 
     'models' => [
-        //'namespace' => 'App\\',
+        'namespace' => 'App\\Models\\',
     ],
 
     /*
@@ -129,13 +129,13 @@ return [
         /*
          * Select default language
          */
-        'default' => 'en',
+        'default' => 'es',
 
         /*
          * Select languages that are supported.
          */
         'locales' => [
-            'en',
+            'es',
             //'pt',
         ],
     ],
@@ -200,7 +200,7 @@ return [
     |
     */
 
-    'primary_color' => '#1683FB',
+    'primary_color' => '#000000',
 
     'show_dev_tips' => true, // Show development tip "How To Use:" in Menu and Settings
 

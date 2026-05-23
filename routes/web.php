@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use TCG\Voyager\Facades\Voyager;
 use Wave\Facades\Wave;
-
+use App\Http\Controllers\VistasController;
 // Authentication routes
 Auth::routes();
 
@@ -23,6 +23,10 @@ Auth::routes();
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+Route::get('settings/escuelas/{id}', [VistasController::class, 'escuela'])
+    ->name('escuela.detalle');
+Route::get('/torneos/{slug}', [VistasController::class, 'torneo'])
+    ->name('torneo.detalle');
 
 // Wave routes
 Wave::routes();

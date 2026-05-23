@@ -1,0 +1,91 @@
+.tarjeta-fondo{
+    background-image: url('../img/fondoarbitro.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+   
+    border-radius: 30px;
+
+    position: relative;
+    overflow: hidden;
+}
+.tarjeta-fondo::before{
+    content:'';
+    position:absolute;
+    inset:0;
+  
+}
+
+.tarjeta-fondo-jugador{
+    background-image: url('../img/fondojugador.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.tarjeta-fondo-jugador::before{
+    content:'';
+    position:absolute;
+    inset:0;
+}
+.marquee{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee-track{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    width: max-content;
+
+    animation: marquee 20s linear infinite;
+}
+
+.marquee-track img{
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+}
+
+@keyframes marquee{
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(-50%);
+    }
+}
+
+.equipo-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.equipo-item img{
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.equipo-item h4{
+    font-size: 14px;
+    text-align: center;
+}
+
+.fondo-contenedor{
+    background-image: url('../img/fondo2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 100vh;
+}
